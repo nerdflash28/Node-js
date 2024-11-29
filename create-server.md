@@ -15,18 +15,18 @@ function rqListener(req,res)
 http.createServer(rqListener);
 ```
 
-## Step 3: creating server using callback function
+## Step 3: creating server using anonymous function
 ```js
 // method 1
 http.createServer(funtion(req,res) {
     // code to handle the request
 });
 
-// method 2
+// method 2 : using anonymous arrow function
 http.createServer((req,res) => {
     // code to handle the request
     console.log(req)
-})
+});
 ```
 
 ## Step 4: listen to the request 
@@ -45,12 +45,12 @@ server.listen(3000);
 // import module
 const http = require('http')
 
-// create server method
+// create server method & store it in a variable
 const server = http.createServer((req,res) => {
     // code to handle the request
     console.log(req)
 })
 
-// create listening method
+// this listen method starts a process, where node js keep listening for incoming requests
 server.listen(3000);
 ```
