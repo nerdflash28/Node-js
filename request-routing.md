@@ -3,9 +3,9 @@
 * To print important request parameters we use the below code
 ```js
 
-    const http = require('http')
+    import {createServer} from 'http';
 
-    const server = http.createserver((req,res) => {
+    const server = createServer((req,res) => {
         // this will print givent ur, request method, header attached with that request
         console.log(req.url, req.method, req.headers);
     });
@@ -17,9 +17,9 @@
 * sending Basic HTML page using response method
 
 ```js
-    const http = require('http');
+    import {createServer} from 'http';
 
-    const server = http.createServer((req,res) => {
+    const server = createServer((req,res) => {
         // setting the header
         res.setHeader('Content-Type','text/html');
         // writing HTML page to the header
@@ -34,4 +34,7 @@
     server.listen(3000);
 ```
 
+## Understanding req methods
+* these methods are used to take actions on client inputs
+* to understand this in more detail please refer to the example : routing.js
 
